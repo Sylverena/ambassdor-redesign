@@ -13,7 +13,9 @@ a:active {
 }
 .active {
   color: goldenrod !important;
-  text-decoration: underline !important;
+}
+#logo {
+  text-decoration: none;
 }
 .header {
   display: grid;
