@@ -1,8 +1,8 @@
 {
-  "name": "Ambassador",
+  "name": "ambassador",
   "version": "0.0.1",
   "description": "",
-  "keywords": "website",
+  "keywords": ["website"],
   "license": "GNU GPL v3.0",
   "author": "Sylverena",
   "scripts": {
@@ -15,6 +15,7 @@
     "parcel-bundler": "^1.12.4"
   },
   "dependencies": {
-    "less": "^4.2.0"
+    "less": "^4.2.0",
+    "lightslider": "^1.1.6"
   }
 }

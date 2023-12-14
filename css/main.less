@@ -1,0 +1,190 @@
+@font-face {
+  font-family: OldLondon;
+  src: url("/fonts/OldLondon.ttf");
+}
+
+a{
+  color: goldenrod;
+
+  &:active {
+    color: white;
+  }
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  font-family: OldLondon, fantasy;
+  padding: 1em;
+  text-shadow: 1px 4px 4px #555;
+  background-image: url("/img/star-grassbg.jpg");
+  background-repeat: repeat-x;
+  background-size: contain;
+  box-shadow: inset 5px 5px 50px black;
+  border-bottom: 5px solid black;
+
+  .left {
+    display: block;
+    font-size: 8rem;
+    background-image: url("/img/wood_texture-horizontal.jpg");
+    border: rosybrown 3px solid;
+    border-radius: 2.5px;
+    padding: 0 2rem 2rem 2rem;
+    color: goldenrod;
+  }
+
+  .right {
+    display: flex;
+    gap: 1em;
+  }
+
+  .barrel {
+    width: 6rem;
+    height: 6rem;
+    font-size: 2.75rem;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 100%;
+    border: rosybrown 3px solid;
+    text-align: center;
+    display: flex;
+    background-image: url("/img/wood_texture-vertical.jpg");
+    background-size: 200%;
+    color: white;
+    padding: 1em;
+    text-decoration: none;
+    transition:500ms ease-in-out;
+
+    &:hover
+    {
+      transform: scale(1.25);
+    }
+
+  }
+}
+
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dead-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing {
+  h2 {
+    margin: 0;
+    font-size: 3em;
+  }
+
+  p {
+    font-size: 2em;
+  }
+
+  background-image: url("/img/ambassador-panorama.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+  color: white;
+  background-color: black;
+
+  .card {
+    height: 50%
+  }
+
+}
+
+.card {
+  padding: 5rem;
+  background-color: rgba(50, 50, 50, .85);
+}
+
+.home-splash {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  height: 100vh;
+}
+
+.below-splash {
+  height: 100vh;
+  background-image: url("/img/wood_texture-horizontal.jpg");
+  overflow: hidden;
+  border-top: 2px solid black;
+  position: relative;
+  color: white;
+
+  z-index: 1;
+
+  .table {
+    position: absolute;
+    overflow: hidden;
+    background-image: url("/img/wood_texture-vertical.jpg");
+    background-size: 100%;
+
+    width: 60rem;
+    height: 60rem;
+
+    border-radius: 100%;
+    border: rosybrown solid 1px;
+    display: flex;
+    justify-content: center;
+    //align-items: center;
+
+
+    z-index: 2;
+  }
+
+  .column-content {
+    position: relative;
+    display: grid;
+    height: 100%;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: auto auto;
+    gap: 1em;
+    z-index: 3;
+
+    .card {
+      width: 40vw;
+      padding: 2em;
+      background-color: rgba(50, 50, 50, .9);
+
+      .map-container{
+        background-color: #dcb88d;
+        padding: 1em;
+        width: 80%;
+        margin-bottom: 5em;
+      }
+
+      iframe {
+        box-shadow: 5px 5px 5px black;
+      }
+
+      h2 {
+        font-size: 3em;
+      }
+
+      p {
+        font-size: 1.25em;
+      }
+    }
+
+  }
+}
+
+.footer
+{
+  height: 30vh;
+  background-color: #333333;
+  border-top: solid 2px white;display: grid;
+  grid-template-columns: 1fr auto;
+
+}
+
+
