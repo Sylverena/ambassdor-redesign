@@ -3,12 +3,22 @@
   src: url("../fonts/OldLondon.ttf");
 }
 
+html
+{
+  scroll-behavior: smooth;
+}
+
 a{
   color: goldenrod;
 
   &:active {
     color: white;
   }
+}
+
+.active{
+  color: goldenrod !important;
+  text-decoration: underline !important;
 }
 
 .header {
@@ -141,7 +151,7 @@ a{
     z-index: 2;
   }
 
-  .column-content {
+  .column-grid-content {
     position: relative;
     display: grid;
     height: 100%;
@@ -177,6 +187,17 @@ a{
 
   }
 }
+
+.menu-column{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 12vw;
+  right: 12vw;
+  background-color: floralwhite;
+  box-shadow: 0 0 50px 50px rgba(0,0,0,.8);
+}
+
 
 .footer
 {
