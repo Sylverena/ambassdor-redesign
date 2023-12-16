@@ -1,4 +1,5 @@
 $(document).ready(function () {
+$('input').prop('checked', true);
 
   function checkAllBox()
   {
