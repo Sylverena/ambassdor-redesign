@@ -3,12 +3,11 @@
   src: url("../fonts/OldLondon.ttf");
 }
 
-html
-{
+html {
   scroll-behavior: smooth;
 }
 
-a{
+a {
   color: goldenrod;
 
   &:active {
@@ -16,11 +15,22 @@ a{
   }
 }
 
-.active{
+blockquote
+{
+  padding: 1em 2em;
+  border-left: 5px inset black;
+  width: 50%;
+}
+
+.active {
   color: goldenrod !important;
 }
 
-#logo{
+.hidden {
+  display: none;
+}
+
+#logo {
   text-decoration: none;
 }
 
@@ -28,6 +38,7 @@ a{
   display: grid;
   grid-template-columns: 1fr auto;
   font-family: OldLondon, fantasy;
+  overflow: hidden;
   padding: 1em;
   text-shadow: 1px 4px 4px #555;
   background-image: url("../img/star-grassbg.jpg");
@@ -38,11 +49,12 @@ a{
 
   .left {
     display: block;
-    font-size: 8rem;
+    font-size: 8em;
+    max-height: 80%;
     background-image: url("../img/wood_texture-horizontal.jpg");
     border: rosybrown 3px solid;
     border-radius: 2.5px;
-    padding: 0 2rem 2rem 2rem;
+    padding: 2rem;
     color: goldenrod;
   }
 
@@ -52,9 +64,9 @@ a{
   }
 
   .barrel {
-    width: 6rem;
-    height: 6rem;
-    font-size: 2.75rem;
+    width: 5vw;
+    height: 5vw;
+    font-size: 2.75em;
 
     justify-content: center;
     align-items: center;
@@ -68,10 +80,9 @@ a{
     color: white;
     padding: 1em;
     text-decoration: none;
-    transition:500ms ease-in-out;
+    transition: 500ms ease-in-out;
 
-    &:hover
-    {
+    &:hover {
       transform: scale(1.25);
     }
 
@@ -126,7 +137,6 @@ a{
 }
 
 .below-splash {
-  height: 100vh;
   background-image: url("../img/wood_texture-horizontal.jpg");
   overflow: hidden;
   border-top: 2px solid black;
@@ -168,10 +178,11 @@ a{
       padding: 2em;
       background-color: rgba(50, 50, 50, .9);
 
-      .map-container{
+      .map-container {
         background-color: #dcb88d;
         padding: 1em;
         width: 80%;
+        height: 50%;
         margin-bottom: 5em;
       }
 
@@ -191,24 +202,88 @@ a{
   }
 }
 
-.menu-column{
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 12vw;
-  right: 12vw;
+.sidebar {
+  border-right: 5px inset black;
+  height: 100%;
+
+  ul {
+    list-style: none outside;
+    margin-left: -2ch;
+  }
+
+  .wrapper {
+    top: 0;
+    position: sticky;
+    height: 100%;
+  }
+}
+
+.menu-column.grid {
+  display: grid;
+  grid-template-columns: 16% 1fr;
+}
+
+.menu-column {
+  width: 74vw;
+  color: #333333;
   background-color: floralwhite;
-  box-shadow: 0 0 50px 50px rgba(0,0,0,.8);
+  padding: 2vw;
+  box-shadow: 0 0 50px 50px rgba(0, 0, 0, .8);
+
+  .menu-cell-container {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+
+    .menu-section.build-pizza .item {
+      width: 100% !important;
+      .prices {
+        margin-bottom: 1em;
+      }
+    }
+
+    .menu-section {
+      width: 100%;
+      padding: 1em;
+
+      hr {
+        margin-top: 4em;
+      }
+
+
+      .menu-items {
+        display: flex;
+        flex-wrap: wrap;
+
+        .item {
+          position: relative;
+          border: dotted black 2px;
+          width: 21%;
+          padding: 1em;
+          //height: 15vh;
+        }
+      }
+    }
+
+    .menu-section.pizza {
+      .item {
+        width: 45%;
+      }
+    }
+    .menu-section .subs {
+      .item {
+        width: 45% !important;
+      }
+    }
+  }
 }
 
 
-.footer
-{
+.footer {
+  position: static;
   height: 30vh;
   background-color: #333333;
-  border-top: solid 2px white;display: grid;
+  border-top: solid 2px white;
+  display: grid;
   grid-template-columns: 1fr auto;
-
 }
-
-

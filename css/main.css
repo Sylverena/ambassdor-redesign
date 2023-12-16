@@ -11,8 +11,16 @@ a {
 a:active {
   color: white;
 }
+blockquote {
+  padding: 1em 2em;
+  border-left: 5px inset black;
+  width: 50%;
+}
 .active {
   color: goldenrod !important;
+}
+.hidden {
+  display: none;
 }
 #logo {
   text-decoration: none;
@@ -21,6 +29,7 @@ a:active {
   display: grid;
   grid-template-columns: 1fr auto;
   font-family: OldLondon, fantasy;
+  overflow: hidden;
   padding: 1em;
   text-shadow: 1px 4px 4px #555;
   background-image: url("../img/star-grassbg.jpg");
@@ -31,11 +40,12 @@ a:active {
 }
 .header .left {
   display: block;
-  font-size: 8rem;
+  font-size: 8em;
+  max-height: 80%;
   background-image: url("../img/wood_texture-horizontal.jpg");
   border: rosybrown 3px solid;
   border-radius: 2.5px;
-  padding: 0 2rem 2rem 2rem;
+  padding: 2rem;
   color: goldenrod;
 }
 .header .right {
@@ -43,9 +53,9 @@ a:active {
   gap: 1em;
 }
 .header .barrel {
-  width: 6rem;
-  height: 6rem;
-  font-size: 2.75rem;
+  width: 5vw;
+  height: 5vw;
+  font-size: 2.75em;
   justify-content: center;
   align-items: center;
   border-radius: 100%;
@@ -100,7 +110,6 @@ a:active {
   height: 100vh;
 }
 .below-splash {
-  height: 100vh;
   background-image: url("../img/wood_texture-horizontal.jpg");
   overflow: hidden;
   border-top: 2px solid black;
@@ -139,6 +148,7 @@ a:active {
   background-color: #dcb88d;
   padding: 1em;
   width: 80%;
+  height: 50%;
   margin-bottom: 5em;
 }
 .below-splash .column-grid-content .card iframe {
@@ -150,16 +160,66 @@ a:active {
 .below-splash .column-grid-content .card p {
   font-size: 1.25em;
 }
-.menu-column {
-  position: absolute;
+.sidebar {
+  border-right: 5px inset black;
+  height: 100%;
+}
+.sidebar ul {
+  list-style: none outside;
+  margin-left: -2ch;
+}
+.sidebar .wrapper {
   top: 0;
-  bottom: 0;
-  left: 12vw;
-  right: 12vw;
+  position: sticky;
+  height: 100%;
+}
+.menu-column.grid {
+  display: grid;
+  grid-template-columns: 16% 1fr;
+}
+.menu-column {
+  width: 74vw;
+  color: #333333;
   background-color: floralwhite;
+  padding: 2vw;
   box-shadow: 0 0 50px 50px rgba(0, 0, 0, 0.8);
 }
+.menu-column .menu-cell-container {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+}
+.menu-column .menu-cell-container .menu-section.build-pizza .item {
+  width: 100% !important;
+}
+.menu-column .menu-cell-container .menu-section.build-pizza .item .prices {
+  margin-bottom: 1em;
+}
+.menu-column .menu-cell-container .menu-section {
+  width: 100%;
+  padding: 1em;
+}
+.menu-column .menu-cell-container .menu-section hr {
+  margin-top: 4em;
+}
+.menu-column .menu-cell-container .menu-section .menu-items {
+  display: flex;
+  flex-wrap: wrap;
+}
+.menu-column .menu-cell-container .menu-section .menu-items .item {
+  position: relative;
+  border: dotted black 2px;
+  width: 21%;
+  padding: 1em;
+}
+.menu-column .menu-cell-container .menu-section.pizza .item {
+  width: 45%;
+}
+.menu-column .menu-cell-container .menu-section .subs .item {
+  width: 45% !important;
+}
 .footer {
+  position: static;
   height: 30vh;
   background-color: #333333;
   border-top: solid 2px white;
